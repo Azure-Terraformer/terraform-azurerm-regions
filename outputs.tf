@@ -37,6 +37,12 @@ output "regions_by_name_or_display_name" {
   value       = merge(local.regions_by_display_name, local.regions_by_name)
 }
 
+output "all_region_names" {
+  value = distinct([
+    for v in local.regions_data_merged : v.name
+  ])
+}
+
 output "supported_geographies" {
   value = local.supported_geos
 }
