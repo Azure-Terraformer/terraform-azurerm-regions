@@ -36,3 +36,11 @@ output "regions_by_name_or_display_name" {
   description = "A map of regions by either display names or name, to region objects. See `regions` output for more details."
   value       = merge(local.regions_by_display_name, local.regions_by_name)
 }
+
+output "supported_geographies" {
+  value = local.supported_geos
+}
+
+output "supported_geography_groups" {
+  value = local.supported_geos
+}
