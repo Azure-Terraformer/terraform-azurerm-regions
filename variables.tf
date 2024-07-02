@@ -1,3 +1,8 @@
+variable "geography" {
+  description = "The geography of the region."
+  type        = string
+  default     = null
+}
 variable "geography_group" {
   description = "The geography group of the region."
   type        = string

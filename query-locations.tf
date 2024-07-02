@@ -23,7 +23,8 @@ locals {
     for location in local.all_physical_locations_list : location
     if(
       (!var.include_only_recommended_regions || location.recommended) &&
-      (var.geography_group == null || location.geography_group == var.geography_group)
+      (var.geography_group == null || location.geography_group == var.geography_group) &&
+      (var.geography == null || location.geography == var.geography)
     )
   ]
 }

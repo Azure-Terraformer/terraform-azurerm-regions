@@ -1,7 +1,7 @@
 module "regions" {
   source                      = "../../"
-  geography_group             = "Europe"
-  availability_zones_required = true
+  geography                   = "Switzerland"
+  availability_zones_required = false
 }
 
 output "regions_by_display_name" {
