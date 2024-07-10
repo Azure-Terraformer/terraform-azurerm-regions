@@ -1,3 +1,5 @@
 output "regions" {
-  value = module.regions.regions
+  value       = module.regions.regions
+  description = "Regions"
+  sensitive   = false
 }

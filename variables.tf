@@ -9,6 +9,7 @@ variable "geography" {
     condition     = var.geography == null ? true : contains(local.supported_geos, var.geography)
     error_message = "The geography must be a supported value (e.g., ${join(", ", local.supported_geos)})."
   }
+  sensitive = false
 }
 variable "geography_group" {
   type        = string
@@ -21,6 +22,7 @@ variable "geography_group" {
     condition     = var.geography_group == null ? true : contains(local.supported_geo_groups, var.geography_group)
     error_message = "The geography group must be a supported value (e.g., ${join(", ", local.supported_geo_groups)})."
   }
+  sensitive = false
 }
 variable "availability_zones_required" {
   type        = bool
@@ -32,6 +34,7 @@ variable "availability_zones_required" {
 
   The default is false.
   DESCRIPTION
+  sensitive   = false
 }
 variable "include_only_recommended_regions" {
   type        = bool
@@ -43,4 +46,5 @@ variable "include_only_recommended_regions" {
 
   The default is false. The 'recommended' attribute is a qualitiative determined by Microsoft.
   DESCRIPTION
+  sensitive   = false
 }
