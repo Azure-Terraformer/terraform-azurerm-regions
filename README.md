@@ -28,3 +28,7 @@ output "regions" {
 ## Credits
 
 Based off the work of matt-FFFFFF and his version found [here](https://github.com/Azure/terraform-azurerm-regions)
+
+<!-- BEGIN_TF_DOCS -->
+
+<!-- END_TF_DOCS -->
