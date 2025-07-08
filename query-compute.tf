@@ -9,7 +9,7 @@ data "azapi_resource_action" "compute_provider" {
 
 locals {
   all_zonemappings_list = tolist(flatten([
-    for resource_type in jsondecode(data.azapi_resource_action.compute_provider.output).resourceTypes : [
+    for resource_type in data.azapi_resource_action.compute_provider.output.resourceTypes : [
       for mapping in resource_type.zoneMappings : [{
         location = mapping.location
         zones    = sort([for zone in mapping.zones : tonumber(zone)])

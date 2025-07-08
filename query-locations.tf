@@ -8,7 +8,7 @@ data "azapi_resource_action" "locations" {
 
 locals {
   all_physical_locations_list = [
-    for location in jsondecode(data.azapi_resource_action.locations.output).value : {
+    for location in data.azapi_resource_action.locations.output.value : {
       display_name       = location.displayName
       geography          = location.metadata.geography
       geography_group    = location.metadata.geographyGroup
