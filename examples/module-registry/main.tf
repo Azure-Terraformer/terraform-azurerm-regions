@@ -1,4 +1,4 @@
 module "regions" {
   source  = "Azure-Terraformer/regions/azurerm"
-  version = "1.0.2"
+  version = "1.0.4"
 }
